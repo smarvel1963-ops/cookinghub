@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- SAVE AS: index.html  ·  LOCATION: C:/MarvelApps/cookinghub/index.html
+     COOKING HUB - app #11 of the Hub family, its own app at smarvel1963-ops.github.io/cookinghub/ (Scott 2026-11-15: his Recipe Hub
+     boards, "Yes, build it", then "maybe should be clalled cooking hub"; boards + notes C:/MarvelApps/docs/recipehub_design_2026-11-15/).
+     Its own page, icons, install and offline worker; it runs the shared Hub engine in the Day Hub repo with DH_MODE = "cooking"
+     (+ cookbook.js, cooking.js, cookingtiles.css). Its own data (cookinghub.v1) and photos (cookinghub.photos), kept on this phone. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff4e3" id="themeColor">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Cooking Hub</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Nunito:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dayhub/styles.css">
+  <link rel="stylesheet" href="../dayhub/cookingtiles.css">
+</head>
+<body>
+  <header id="hero" class="hero"></header>
+
+  <main id="cards" class="cards"></main>
+
+  <button id="fab" class="fab" aria-label="Add something">+</button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- quick add -->
+  <div id="qa" class="sheet hidden" role="dialog" aria-modal="true" aria-label="Add">
+    <div class="sheet-body">
+      <div class="grab"></div>
+      <div class="sheet-head"><h2>Add</h2><button class="icon-btn" data-close="qa" aria-label="Close">✕</button></div>
+      <div id="qaTypes" class="seg"></div>
+      <form id="qaForm" class="qa-form"></form>
+    </div>
+  </div>
+
+  <!-- settings -->
+  <div id="sheet" class="sheet hidden" role="dialog" aria-modal="true" aria-label="Settings">
+    <div class="sheet-body">
+      <div class="grab"></div>
+      <div class="sheet-head"><h2>Make it yours</h2><button class="icon-btn" data-close="sheet" aria-label="Close">✕</button></div>
+      <label class="field">Your first name <input id="setName" placeholder="e.g. Sam"></label>
+      <label class="field">Weather: city or ZIP code <input id="setCity" placeholder="e.g. Denver, CO  or  80202" inputmode="text"></label>
+      <label class="field">Profession
+        <select id="setPack"></select>
+      </label>
+      <h3>Cards — ▲▼ to move, switch to show or hide</h3>
+      <ul id="cardList" class="card-list"></ul>
+      <p class="fine"><b>Cooking Hub — a Marvel Corp app.</b> Its own app, and part of the Hub family with Day Hub, Cruise Hub, Trip Hub, Home Hub, Auto Hub, Money Hub, Health Hub, Family Hub, Pet Hub and Hub Universe. Everything you type stays on this phone unless you turn on backup; recipe and card photos stay on this phone only. Not nutrition or health advice. <span id="ver"></span></p>
+    </div>
+  </div>
+
+  <script>window.DH_MODE = "cooking";</script>
+  <script src="../dayhub/features.js"></script>
+  <script src="../dayhub/app.js"></script>
+  <script src="../dayhub/scenes.js"></script>
+  <script src="../dayhub/cruise.js"></script>
+  <script src="../dayhub/shell.js"></script>
+  <script src="../dayhub/trip.js"></script>
+  <script src="../dayhub/ships.js"></script>
+  <script src="../dayhub/cookbook.js"></script>
+  <script src="../dayhub/cooking.js"></script>
+  <script src="../dayhub/cookshare.js"></script>
+  <script src="../dayhub/ui.js"></script>
+</body>
+</html>

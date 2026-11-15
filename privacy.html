@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- SAVE AS: privacy.html · LOCATION: C:/MarvelApps/cookinghub/privacy.html
+     Cooking Hub privacy policy (app v1.64, 2026-11-15). Same structure as Pet Hub's and Family Hub's. Plain words; only claims the
+     code actually backs (shared Hub engine in the Day Hub repo, DH_MODE "cooking" + cooking.js). Update the date whenever a data flow changes. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cooking Hub Privacy</title>
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <style>
+    :root { --bg: #fff4e3; --fg: #4a2c1a; --dim: #6d5a4c; --accent: #c0392b; --line: rgba(0,0,0,.12); }
+    @media (prefers-color-scheme: dark) { :root { --bg: #17120e; --fg: #f3eee6; --dim: #c4b6a8; --accent: #ff8a7a; --line: rgba(255,255,255,.14); } }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 28px 16px 60px; }
+    h1 { font-size: 28px; margin: 0 0 4px; } h2 { font-size: 19px; margin: 28px 0 6px; }
+    .dim { color: var(--dim); font-size: 14px; } a { color: var(--accent); }
+    .wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; } td, th { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+    th { font-size: 13px; color: var(--dim); font-weight: 600; }
+  </style>
+</head>
+<body><main>
+  <h1>Cooking Hub privacy policy</h1>
+  <p class="dim">Cooking Hub is an app by Marvel Corp, part of the Hub family of apps. Last updated November 15, 2026 (sharing recipes added).</p>
+
+  <h2>The short version</h2>
+  <p>What you put in Cooking Hub stays on your phone. There are no Cooking Hub accounts, no ad trackers and no analytics in the app. Your information is never sold and never used for advertising. Two things leave your phone only when you choose them - sharing a recipe with every Cooking Hub, and the optional AI helper - and they are listed below.</p>
+
+  <h2>What stays on your phone</h2>
+  <p>Everything you type: your first name if you give it, the look you pick, your own recipes (name, category, servings, times, ingredients, directions, the family story and notes, who it came from, and whether it is a Private Family Recipe), drafts, favorites, your pantry (items, amounts, groups and use-by dates), the ingredients you add in the Dinner Finder, your week's dinner plan, your grocery list, the times you cooked a recipe and your own ratings. These are saved in your browser's storage on your phone. We cannot see them.</p>
+  <p>Photos (a photo of a dish and the photo you take of an old recipe card) are kept in a separate store on your phone. They are never put in the backup and never sent anywhere. Cooking Hub does not read the writing on a card - it keeps the photo, and you type the words.</p>
+  <p><b>Deleting:</b> ⚙ Settings → <b>Your data</b> → <b>Erase everything</b> deletes your Cooking Hub information on the phone (photos included). One recipe: open it → Delete.</p>
+
+  <h2>Not nutrition or health advice</h2>
+  <p>Cooking Hub gives recipes and cooking steps. Safe cooking temperatures in the steps follow the USDA. Nothing in the app is nutrition, diet or health advice.</p>
+
+  <h2>Recipes from videos</h2>
+  <p>Some built-in recipes are our own versions of dishes seen in creators' videos. Each one links to the original video and names the creator. Tapping <b>Watch the video</b> opens that video on its own site (for example Facebook), under that site's own privacy policy.</p>
+
+  <h2>What leaves your phone, and why</h2>
+  <div class="wrap"><table>
+    <tr><th>When</th><th>What is sent</th><th>To whom</th></tr>
+    <tr><td>Always (opening the app)</td><td>Normal web requests (your IP address, browser type)</td><td>GitHub Pages, which hosts the app, and Google Fonts, which supplies the lettering.</td></tr>
+    <tr><td>If you enter a city or ZIP for weather (optional, in ⚙)</td><td>The city or ZIP code you enter, then that place's map location</td><td>Open-Meteo (weather and place search). For US ZIP codes, also Zippopotam.us.</td></tr>
+    <tr><td>If you use 💡 Ask with the AI helper on</td><td>Your question, and the Cooking Hub information it needs to answer from: the built-in recipe names, your own recipes that are not marked private, your pantry, this week's dinners, your favorites, your grocery list and your ratings. Private Family Recipes and photos are never sent.</td><td>Our relay (a Google Apps Script run by Marvel Corp), which passes it to Anthropic's Claude to get the answer (<a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic's privacy policy</a>). The relay does not save your text.</td></tr>
+    <tr><td>Opening the app (online)</td><td>A request for the recipes our cooks have shared, the Recipe of the Week and a shared recipe's star count. Nothing about you is sent.</td><td>Google Firebase (Firestore), which stores the shared recipes for Marvel Corp.</td></tr>
+    <tr><td>If you share one of your recipes with every Cooking Hub (you choose each one; a Private Family Recipe can't be shared)</td><td>The recipe's name, category, servings, times, ingredients, directions and story, the first name you choose to show (optional), the dish photo only if you tick it, and a random id for your phone. Never the recipe-card photo.</td><td>Google Firebase, where a person at Marvel Corp reviews it. If approved, everyone using Cooking Hub can see it with that first name. To take a shared recipe down, email us.</td></tr>
+    <tr><td>If you rate a shared recipe, vote for the Recipe of the Week, or report a recipe</td><td>Your stars (and whether you cooked it), your vote, or the reason you chose - with a random id for your phone so each phone counts once</td><td>Google Firebase. Star counts are shown to everyone; votes and reports are read only by Marvel Corp.</td></tr>
+    <tr><td>If you tap Share (a recipe, your cookbook or your grocery list)</td><td>The text of what you chose to share (never a Private Family Recipe)</td><td>Whatever app you pick on your phone's share menu</td></tr>
+    <tr><td>If you turn on backup</td><td>A copy of your Cooking Hub information (not photos)</td><td>A hidden app folder in <b>your own</b> Google Drive. Only the Hub apps on your devices can read it. We cannot.</td></tr>
+    <tr><td>If you turn on reminders</td><td>Nothing. Reminders come from your phone itself.</td><td>No one</td></tr>
+  </table></div>
+
+  <h2>Children</h2>
+  <p>Cooking Hub is made for home cooks. It has no accounts and does not knowingly collect information from children under 13.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy: <a href="mailto:smarvel1963@gmail.com">smarvel1963@gmail.com</a>.</p>
+</main></body>
+</html>
